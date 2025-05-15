@@ -1,0 +1,99 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package   theme_lambda2
+    @copyright 2024 redPIthemes
+}}
+{{!
+    @template theme_lambda2/header_style_2
+}}
+
+<header id="main-header" class="clearfix top">
+
+	{{# socialsheader }}
+		{{>theme_lambda2/includes/socials}}
+	{{/ socialsheader }}
+	
+</header>
+
+<nav class="lambda-nav style-2 navbar fixed-top navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+    <a href="{{{ config.homeurl }}}" class="navbar-brand d-flex align-items-center m-0 mr-4 p-0 aabtn">
+        {{# output.should_display_navbar_logo }}
+            <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+        {{/ output.should_display_navbar_logo }}
+        {{^ output.should_display_navbar_logo }}
+            {{{ sitename }}}
+        {{/ output.should_display_navbar_logo }}
+    </a>
+
+    <div class="d-none d-md-flex w-100">
+        {{#primarymoremenu}}
+            <div class="primary-navigation">
+                {{> core/moremenu}}
+            </div>
+            {{#langmenu}}
+                {{> theme_lambda2/includes/language_menu}}
+            {{/langmenu}}
+        {{/primarymoremenu}}   
+        <ul class="navbar-nav my-1 px-1">
+            <!-- page_heading_menu -->
+            {{{ output.page_heading_menu }}}
+        </ul>
+        <div id="usernavigation" class="navbar-nav ml-auto">
+            {{# shownavbarsearch }}
+                <div class="search-margin"></div>
+                    <div class="lambda-search-bar">
+                        {{{ output.lambdasearch }}}
+                    </div>
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+            {{/ shownavbarsearch }}
+            {{# logged_in }}
+                {{{ output.navbar_plugin_output }}}
+                <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                    {{#usermenu}}
+                        {{> core/user_menu }}
+                    {{/usermenu}}
+                </div>
+            {{/ logged_in }}
+            {{^ logged_in }}
+                {{{ output.lambda2loginbutton }}}
+            {{/ logged_in }}
+        </div>
+    </div>
+    {{{ output.edit_switch }}}
+    <div class="d-flex d-md-none align-items-center ml-auto">
+        {{^ logged_in }}
+            {{{ output.lambda2loginbutton }}}
+        {{/ logged_in }}
+        <button class="mobile-menu-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon data-toggle="collapse" data-target="#mobile-menu-collapse" aria-expanded="false" aria-controls="mobile-menu-collapse"></button>
+    </div>
+</nav>
+
+<div class="mobile-menu d-block d-md-none">
+    <nav class="navbar mobile-menu collapse" id="mobile-menu-collapse">
+        <li class="nav-item">
+            <a class="nav-link" href="{{{ config.homeurl }}}">{{#str}}home{{/str}}</a>
+        </li>
+        {{{ output.lambda2mobilemenuitems }}}
+        {{{ output.custom_menu }}}
+    </nav>
+</div>
+
+<div class="nav-sub">
+    {{^ logged_in }}
+        {{{ output.lambda2loginmodal }}}
+    {{/ logged_in }}
+</div>

@@ -1,0 +1,428 @@
+/*------------------------------------
+General Typography
+------------------------------------*/
+body.lambda, .block_login button[type="submit"], input, button, select, textarea {
+    font-family: $font_body, sans-serif;
+    color: $body_color; 
+}
+html, body.lambda {
+    font-size: $font_body_size;
+    font-weight: 400;
+    line-height: 25px;
+}
+h1, h2, h3, h4, h5, h6, .block .card-title, .socials p, #socialheading, .forumpost .subject {
+    font-family: $font_heading, sans-serif;
+    font-weight: $headingweight !important;
+    color: $heading_color;
+}
+h1, .h1 {
+    font-size: 2.46rem;
+	line-height: 3.08rem;
+}
+h2, .h2 {
+    font-size: 2.15rem;
+	line-height: 3.08rem;
+}
+h2 img.icon.iconlarge {
+    height: 2.15rem;
+    width: auto;
+}
+h3 {
+    font-size: 1.85rem;
+	line-height: 3.08rem;
+}
+h4 {
+    font-size: 1.54rem;
+	line-height: 2.46rem;
+}
+h5 {
+    font-size: 1.23rem;
+	line-height: 1.92rem;
+}
+h6 {
+	text-transform:uppercase;
+    font-size: 1.08rem;
+	line-height: 1.92rem;
+}
+h1 small {
+    font-size: 1.85rem;
+}
+h2 small {
+    font-size: 1.54rem;
+}
+h3 small {
+    font-size: 1.23rem;
+}
+h4 small {
+    font-size: 1.14rem;
+}
+a {
+    transition: 0.2s ease-out;
+}
+a:hover {
+    color: $body_color;
+    text-decoration: none;
+}
+a:focus, a:focus-visible {
+    outline: none!important;
+    box-shadow: none!important;
+}
+a.read-more {
+    font-weight: 700;
+}
+a.read-more i {
+    display: none;
+}
+a.read-more:hover i {
+    display: inline-block;
+}
+.breadcrumb {
+    font-size: 0.965rem;
+}
+.text-muted {
+    color: $body_color !important;
+    opacity: 0.75;
+}
+code {
+    font-size: 1rem;
+}
+.maincolor{
+    color: $maincolor;
+}
+.plus {
+	font-size:1.05em;
+}
+.main-heading {
+    font-size: 3.46rem;
+    font-weight: bold !important;
+    line-height: 4.39rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-heading {font-size: 3.32rem; line-height: 4.21rem;}
+    h1, .h1 {font-size: 2.36rem; line-height: 2.95rem;}
+    h2, .h2 {font-size: 2.05rem; line-height: 2.95rem;}
+    h3 {font-size: 1.75rem; line-height: 2.95rem;}
+    h4 {font-size: 1.44rem; line-height: 2.35rem;}
+    h5 {font-size: 1.20rem; line-height: 1.84rem;}
+    h6 {font-size: 1.08rem; line-height: 1.84rem;}
+    h1 small {font-size: 1.77rem;}
+    h2 small {font-size: 1.47rem;}
+    h3 small {font-size: 1.18rem;}
+    h4 small {font-size: 1.11rem;}
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .main-heading {font-size: 3.17rem; line-height: 4.02rem;}
+    h1, .h1 {font-size: 2.25rem; line-height: 2.83rem;}
+    h2, .h2 {font-size: 1.95rem; line-height: 2.83rem;}
+    h3 {font-size: 1.64rem; line-height: 2.83rem;}
+    h4 {font-size: 1.33rem; line-height: 2.25rem;}
+    h5 {font-size: 1.17rem; line-height: 1.76rem;}
+    h6 {font-size: 1.08rem; line-height: 1.76rem;}
+    h1 small {font-size: 1.7rem;}
+    h2 small {font-size: 1.4rem;}
+    h3 small {font-size: 1.12rem;}
+    h4 small {font-size: 1.09rem;}
+}
+@media only screen and (max-width: 575px) {
+    .main-heading {font-size: 3.03rem; line-height: 3.84rem;}
+    h1, .h1 {font-size: 2.15rem; line-height: 2.7rem;}
+    h2, .h2 {font-size: 1.85rem; line-height: 2.7rem;}
+    h3 {font-size: 1.54rem; line-height: 2.7rem;}
+    h4 {font-size: 1.23rem; line-height: 2.15rem;}
+    h5 {font-size: 1.14rem; line-height: 1.68rem;}
+    h6 {font-size: 1.08rem; line-height: 1.68rem;}
+    h1 small {font-size: 1.62rem;}
+    h2 small {font-size: 1.34rem;}
+    h3 small {font-size: 1.07rem;}
+    h4 small {font-size: 1.06rem;}
+}
+
+/*------------------------------------
+HTML-Elements
+------------------------------------*/
+blockquote::before {
+    color: #c1c1c1;
+    content: "\f10e";
+    position: absolute;
+    font-family: $fontawesome;
+    font-weight: 700;
+    font-size: 3.5em;
+    margin: 0 8px;
+    opacity: .25;
+}
+blockquote footer:before, blockquote small:before, blockquote .small:before {
+    content: "- ";
+}
+blockquote p, blockquote footer {
+    padding-left: 2rem;
+}
+blockquote footer {
+	color:#777;
+    font-size: .9rem;
+    margin-top: 0.75rem;
+}
+.fa-ul {
+	list-style-type: none !important;
+}
+.usermenu a.nav-link, .profileblock .popover-region-toggle {
+    color: $body_color;
+}
+ul.list-style-1, ul.list-style-2, ul.list-style-3 {
+    padding-left: 2rem;
+}
+ul.list-style-1 li, ul.list-style-2 li, ul.list-style-3 li {
+    list-style: none outside none;
+}
+ul.list-style-1 li::before, ul.list-style-2 li::before, ul.list-style-3 li::before {
+    font-family: $fontawesome;
+    display: inline-block;
+    margin: 0 0 0 -18px;
+    padding-right: 6px;
+    font-weight: 600;
+}
+ul.list-style-1 li::before {
+    content: "\f105";
+}
+ul.list-style-2 li::before {
+    content: "\f0a9";
+}
+ul.list-style-3 li::before {
+    content: "\f00c";
+}
+ul.colored li::before {
+    color: $maincolor;
+}
+ul.feature-list {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0 0 20px 25px;
+}
+ul.feature-list li {
+    margin-bottom: 0.5rem;
+}
+ul.feature-list li:before {
+    width: 25px;
+    margin: 0 0 0 -25px;
+    padding-right: 6px;
+}
+
+/*------------------------------------
+Content Elements
+------------------------------------*/
+.divider.line-01 {
+    background: #ddd;
+    margin: 20px 0 !important;
+    height: 1px !important;
+    position: relative;
+}
+.divider.line-01::after {
+    background: $maincolor none repeat scroll 0 0;
+    content: "";
+    height: 3px;
+    max-width: 85px;
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: -1px;
+}
+.divider.line-02, .divider.line-03 {
+    background: $maincolor none repeat scroll 0 0;
+    border-radius: 4px;
+    content: "";
+    display: block;
+    height: 4px !important;
+    position: relative;
+    width: 85px;
+}
+.divider.line-02 {
+    margin: 20px 0 !important;
+}
+.divider.line-03 {
+    margin: 20px auto !important;
+}
+.headline {
+	border: medium none;
+	margin-bottom: 10px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+	font-weight:bold;
+    padding: 6px 8px;
+}
+.headline-v1 {
+	background:  #f4f4f4;
+}
+.headline-v2 {
+	background:  $maincolor;
+	color: $menufirstlevel_linkcolor;
+}
+.headline-v3 {
+	background: $menufirstlevelcolor;
+	color: $menufirstlevel_linkcolor;
+}
+.headline i {
+    font-size: 15px;
+    padding: 10px;
+    display: inline;
+    border: 1px solid $maincolor;
+    margin-left: -8px;
+}
+.headline-v1 i {
+    background: none repeat scroll 0 0 $maincolor;
+    color: #fff;
+}
+.headline-v2 i {
+    background: none repeat scroll 0 0 $maincolor;
+    color: #fff;
+    border-left-color: rgba(0, 0, 0, 0.1);
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+.headline-v3 i {
+    background: none repeat scroll 0 0 $maincolor;
+    color: #fff;
+}
+.row.colored > [class*="col-"] {
+    background: #fbfbfb none repeat scroll 0 0;
+    margin: 0 !important;
+    padding: 20px !important;
+}
+.row.colored > [class*="col-"]:hover {
+    background: #efefef none repeat scroll 0 0 !important;
+}
+.row.colored > [class*="col-"]:nth-child(2n) {
+    background: #f4f4f4 none repeat scroll 0 0;
+}
+.responsive-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 0px;
+	height: 0;
+	overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* =========================================================== *
+Bootstrap Elements
+============================================================== */
+.btn.btn-primary, .btn.btn-secondary, .btn.btn-success, .btn.btn-info, .btn.btn-warning, .btn.btn-danger, .btn.btn-dark {
+    background-image: none;
+    color: #fff;
+	border: 0;
+    border-radius: $button_border_radius;
+    padding: .55rem 1.75rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
+    font-size: 1.08em;
+    transition: .3s ease-out;
+    margin: 6px;
+}
+.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus,
+.btn.btn-secondary:hover, .btn.btn-secondary:active, .btn.btn-secondary:focus, 
+.btn.btn-success:hover, .btn.btn-success:active, .btn.btn-success:focus, 
+.btn.btn-info:hover, .btn.btn-info:active, .btn.btn-info:focus, 
+.btn.btn-warning:hover, .btn.btn-warning:active, .btn.btn-warning:focus, 
+.btn.btn-danger:hover, .btn.btn-danger:active, .btn.btn-danger:focus,
+.btn.btn-dark:hover, .btn.btn-dark:active, .btn.btn-dark:focus {
+    color: #fff !important;
+	transition: .3s ease-out;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.btn:focus, .btn:focus-visible {
+    outline: none !important;
+}
+.btn[class*="btn-outline-"] {
+    border-radius: $button_border_radius;
+    padding: .55rem 1.75rem;
+    font-size: 1.08em;
+    transition: .3s ease-out;
+    margin: 6px;
+    border-width: 0.1rem;
+}
+.btn.btn-outline-secondary.dropdown-toggle {
+    border: 1px solid #c3c7cb;
+}
+.btn.btn-link:hover {
+    color: $body_color;
+    text-decoration: none;
+}
+.btn.btn-link:hover > .icon.fa, .btn.btn-link:hover > span {
+    color: $body_color;
+    transition: .3s ease-out;
+}
+.form-control:focus, .aabtn.focus, .aabtn:focus, .btn-link.focus, .btn-link:focus, .nav-link.focus, .nav-link:focus, .editor_atto_toolbar button.focus, .editor_atto_toolbar button:focus, .editor_atto_toolbar .atto_toolbar_row.focus, .editor_atto_toolbar .atto_toolbar_row:focus, [role="button"].focus, [role="button"]:focus, .list-group-item-action.focus, .list-group-item-action:focus, input[type="checkbox"].focus, input[type="checkbox"]:focus, input[type="radio"].focus, input[type="radio"]:focus, input[type="file"].focus, input[type="file"]:focus, input[type="image"].focus, input[type="image"]:focus, .sr-only-focusable.focus, .sr-only-focusable:focus, a.dropdown-toggle.focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"].focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton.focus, .moodle-dialogue-base .closebutton:focus, button.close.focus, button.close:focus, .form-autocomplete-selection.focus, .form-autocomplete-selection:focus, [role="treeitem"]:not([aria-expanded="true"]).focus, [role="treeitem"]:not([aria-expanded="true"]):focus {
+    outline: 0;
+    box-shadow: none;
+}
+.aalink.focus, a.focus.autolink, .aalink:focus, a.autolink:focus, #page-footer a:not([class]).focus, #page-footer a:not([class]):focus, .arrow_link.focus, .arrow_link:focus, a:not([class]).focus, a:not([class]):focus, .activityinstance>a.focus, .activityinstance>a:focus {
+    background-color: transparent !important;
+}
+.btn.login-identityprovider-btn.btn-block {
+    display: inline-flex;
+    color: #555 !important;
+    border: 1px solid rgba(0,0,0,.1);
+    max-width: fit-content;
+    background-color: rgba(0,0,0,.065);
+}
+.btn.login-identityprovider-btn.btn-block img {
+    margin-right: .5rem;
+}
+.filemanager .filemanager-toolbar .btn.btn-secondary:hover {
+    filter: none;
+}
+.filemanager .filemanager-toolbar .btn.btn-secondary:active, .filemanager .filemanager-toolbar .btn.btn-secondary:focus {
+    box-shadow: none !important;
+    background-color: #ced4da !important;
+    border-color: #b1bbc4;
+}
+#sticky-footer .actions .btn, #sticky-footer .btn[data-action="bulkcancel"] {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #666666;
+    padding: 0 0.35rem;
+    transition: all .3s ease-in;
+}
+#sticky-footer .actions .btn:not(.disabled):hover {
+    color: #222222;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: $maincolor !important;
+}
+.badge {
+    font-size: 85%;
+}
+
+/*------------------------------------
+yui
+------------------------------------*/
+.listing-pagination {
+    .yui3-button {
+        border-radius: 0.2rem;
+        text-align: center;
+        height: 31px;
+        min-width: 31px;
+        position: relative;
+        font-size: 14px!important;
+        box-shadow: none;
+        line-height: 26px;
+        padding: 2px!important;
+        background: transparent!important;
+        color: #7d7d7d!important;
+        border: solid 1px #d7d7d7!important;
+    }
+    .yui3-button.active-page {
+        color: #fff !important;
+        background: $maincolor !important;
+        border-color: $maincolor !important;
+    }
+    .yui3-button:not(.active-page):hover {
+        background: #e9ecef !important;
+        transition: 0.3s ease-out;
+    }
+}

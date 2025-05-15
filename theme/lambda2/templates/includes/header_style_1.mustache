@@ -1,0 +1,83 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package   theme_lambda2
+    @copyright 2024 redPIthemes
+}}
+{{!
+    @template theme_lambda2/header_style_1
+}}
+
+<header id="main-header" class="clearfix top style-1">
+	{{# socialsheader }}
+		{{>theme_lambda2/includes/socials}}
+	{{/ socialsheader }}
+	
+	<div id="header-logo">
+		<div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6 text-center">
+				{{# output.lambda2_has_main_logo }}
+					<a href="{{{ config.wwwroot }}}" class="logo"><img src="{{output.lambda2_get_main_logo_url}}" alt="{{sitename}}"></a>
+				{{/ output.lambda2_has_main_logo }}
+				{{^ output.lambda2_has_main_logo }}
+					<a href="{{{ config.wwwroot }}}" class="logo">{{{ sitename }}}</a>
+				{{/ output.lambda2_has_main_logo }}	
+			</div>
+			<div class="col-lg-3 profilelogin">
+					<div class="login-header">
+			<div class="profileblock">
+				{{# logged_in }}
+					{{{ output.navbar_plugin_output }}}
+					<div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+						{{#usermenu}}
+							{{> core/user_menu }}
+						{{/usermenu}}
+        			</div>
+					{{{ headeruserpic }}}
+				{{/ logged_in }}
+				{{^ logged_in }}
+					{{{ output.lambda2loginbutton }}}
+					{{{ output.lambda2loginmodal }}}
+				{{/ logged_in }}
+			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header class="lambda-nav style-0">
+        <nav class="navbar navbar-expand">
+			<div class="menu">
+			{{#primarymoremenu}}
+        		{{> core/moremenu }}
+				{{#langmenu}}
+            		{{> theme_lambda2/includes/language_menu}}
+        		{{/langmenu}}
+    		{{/primarymoremenu}}
+			</div>
+			<div class="d-flex">
+			{{{ output.edit_switch }}}
+			{{# shownavbarsearch }}
+				<div class="search-margin"></div>
+				<div class="lambda-search-bar">
+					{{{ output.lambdasearch }}}
+				</div>
+			{{/ shownavbarsearch }}
+			</div>
+        </nav>
+</header>

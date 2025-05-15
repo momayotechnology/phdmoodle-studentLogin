@@ -1,0 +1,60 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package   theme_lambda2
+    @copyright 2024 redPIthemes
+}}
+{{!
+    @template theme_lambda2/login
+}}
+
+{{>theme_lambda2/includes/head}}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+{{#has_bg_vid}}
+    {{{ output.lambda2_login_bg_vid }}}
+{{/has_bg_vid}}
+
+{{#has_bg_slider}}
+    {{{ output.lambda2_login_bg_slider }}}
+{{/has_bg_slider}}
+
+<div id="page-wrapper">
+    {{{ output.standard_top_of_body_html }}}
+    <div id="page" class="container-fluid">
+        <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
+        <div class="login-wrapper">
+            <div class="login-container">
+                <div class="loginform-toggle">
+                    <h2 class="login-heading lambda-toggle">{{#str}}liketologin{{/str}}</h2>
+                </div>
+                {{{ output.main_content }}}
+            </div>
+        </div>
+        </section>
+    </div>
+    {{> theme_boost/footer }}
+</div>
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+{{/js}}

@@ -1,0 +1,63 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package   theme_lambda2
+    @copyright 2024 redPIthemes
+}}
+{{!
+    @template theme_lambda2/footer
+}}
+
+<a id="sticky-to-top" href="#page-top" uk-totop uk-scroll></a>
+{{# socialsfootertop }}
+<div id="footer-top">
+    <div  class="container-fluid">
+        {{>theme_lambda2/includes/socials}}
+    </div>
+</div>
+{{/ socialsfootertop }}
+<footer id="page-footer" class="lambda-page-footer">
+    
+	{{>theme_lambda2/includes/footer_blocks}}
+	
+	<div class="footer-bottom">	
+        <div class="container-fluid">
+            <div id="course-footer" class="row">
+                <div class="col-12">
+                    {{{ output.course_footer }}}
+
+		            {{# socialsfooter }}
+			            {{>theme_lambda2/includes/socials}}
+		            {{/ socialsfooter }}
+
+		            {{# hasfootnote }}
+			            {{{ footnote }}}
+		            {{/ hasfootnote }}
+
+                    {{# output.page_doc_link }}
+                        <p class="helplink">{{{ output.page_doc_link }}}</p>
+                    {{/ output.page_doc_link }}
+		
+                    {{{ output.login_info }}}
+                    <div class="tool_usertours-resettourcontainer"></div>
+        
+                    {{{ output.standard_footer_html }}}
+                    {{{ output.standard_end_of_body_html }}}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

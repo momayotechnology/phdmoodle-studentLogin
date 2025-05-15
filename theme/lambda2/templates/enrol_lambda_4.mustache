@@ -1,0 +1,124 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package   theme_lambda2
+    @copyright 2024 redPIthemes
+}}
+{{!
+    @template theme_lambda2/enrol_lambda_4
+}}
+
+{{>theme_lambda2/includes/head}}
+
+<body {{{ bodyattributes }}}>
+<div class="wrapper-lambda-outer">
+{{> core/local/toast/wrapper}}
+<div id="page-wrapper-outer">
+    {{{ output.standard_top_of_body_html }}}
+
+<div id="page" data-region="mainpage" data-usertour="scroller" class="drag-container">
+<div id="page-top"></div>
+<div class="wrapper-lambda">
+
+    {{#header_style_0}}
+	    {{>theme_lambda2/includes/header_style_0}}
+    {{/header_style_0}}
+
+    {{#header_style_1}}
+	    {{>theme_lambda2/includes/header_style_1}}
+    {{/header_style_1}}
+
+    {{#header_style_2}}
+	    {{>theme_lambda2/includes/header_style_2}}
+    {{/header_style_2}}
+
+    <div id="lambda-page-header" class="my-4">
+        <div class="courseheaderimage" style="background-image: url({{{ output.theme_lambda2_get_courseimage }}});">
+            <div class="page-header-headings mb-3">
+                <h1 class="h2 mb-0">{{{ output.theme_lambda2_get_coursename }}}<small class="text-white" style="font-size: 1.25rem;"><br>{{{ output.theme_lambda2_get_coursecategory }}}</small></h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="page-content" class="row lambda-enrol enrol-4 mt-0">
+    
+        <div id="region-main-box" class="col-xs-12 col-12 pt-3">
+            <section id="region-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>{{#str}}coursesummary{{/str}}</h4>
+                        <div class="divider line-02"></div>
+                        {{{ output.theme_lambda2_get_coursesummary }}}
+                        <hr>
+                        <div class="coursetags">
+                            {{{ output.theme_lambda2_show_coursetags }}}
+                        </div>
+                        {{#show_sharebuttons_enrol}}
+	                        {{{ output.theme_lambda2_show_sharebuttons }}}
+                        {{/show_sharebuttons_enrol}}
+                    </div>
+                    <div class="col-md-4 lambda-enrol-block-pos">
+                        <section class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
+                            <div class="block-pos-desc">
+                                <span>{{#str}}region-side-pre, theme_lambda2{{/str}}</span>
+                            </div>
+                            {{{ addblockbutton }}}
+                            <div class="block jumbotron pt-3 pb-3">
+                                <h5 class="card-title">{{#str}}info{{/str}}</h5>
+                                {{{ output.theme_lambda2_show_courseprice }}}
+                                <p class="time">
+                                    {{{ output.theme_lambda2_get_coursestartdate }}}<br>{{{ output.theme_lambda2_get_courseenddate }}}
+                                </p>
+                                <p class="text-center">
+                                    <a href="#main-enrol" class="btn btn-primary btn-lg" uk-scroll>{{#str}}enrolme, enrol{{/str}}!</a>
+                                </p>
+                            </div>
+                            {{{ output.theme_lambda2_course_custom_fields }}}
+                            {{#haspreblocks}}
+                                {{{ sidepreblocks }}}
+                            {{/haspreblocks}}
+                        </section>
+                    </div>
+                </div>
+
+                <div id="main-enrol" class="jumbotron text-center">
+                    {{{ output.main_content }}}
+                </div>
+
+            </div>
+            </section>
+        </div>
+    </div>
+
+{{>theme_lambda2/includes/footer}} 
+</div>
+</div>
+
+{{{ output.standard_after_main_region_html }}}
+
+</div>
+</div>
+</body>
+</html>
+
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+{{/js}}

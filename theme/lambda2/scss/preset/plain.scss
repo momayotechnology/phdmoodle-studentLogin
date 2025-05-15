@@ -1,0 +1,27 @@
+/*------------------------------------
+  plain layout
+  ------------------------------------*/
+  header#main-header, header.lambda-nav, header.lambda-nav .navbar .more-nav>li.nav-item>a.nav-link, header.lambda-nav .navbar .lambda-search-bar, #page-footer, #page-footer .footer-blocks, #page-footer .footer-bottom, .lambda-nav.style-2 {
+    background-color: #fff !important;
+    background-image: none !important;
+}
+body.lambda, .block_login button[type="submit"], input, button, select, textarea, h1, h2, h3, h4, h5, h6, .block .card-title, .socials p, #socialheading, .forumpost .subject, header#main-header a, header.lambda-nav a, header.lambda-nav .navbar .editmode-switch-form label, #page-footer .footer-blocks, #page-footer .footer-blocks, #page-footer .footer-bottom, #page-footer h1, #page-footer h2, #page-footer h3, #page-footer h4, #page-footer h5, #page-footer h6 {
+    color: #333 !important;
+}
+#main-header.style-0 .profileblock .popover-region-toggle i.icon.fa, #main-header.style-1 .profileblock .popover-region-toggle i.icon.fa {
+    background-color: #333 !important;
+}
+header.lambda-nav .navbar .editmode-switch-form .custom-control-label::before {
+    border: 1px solid #999 !important;
+}
+header.lambda-nav.style-0, header.lambda-nav.style-1 {
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(109, 109, 109, .15);
+}
+#page-footer .footer-bottom {
+    border-top: 1px solid #ddd;
+}
+.layout-full #page, .layout-boxed {
+    background-color: #edf5fe !important;
+    background-image: none !important;
+}

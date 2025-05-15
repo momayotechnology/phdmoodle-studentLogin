@@ -1,0 +1,119 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    @package   theme_lambda2
+    @copyright 2024 redPIthemes
+}}
+{{!
+    @template theme_lambda2/footer_blocks
+}}
+
+				{{#hasfooterblockregion}}
+                        <div class="footer-blocks">
+                            <div class="container-fluid">
+							{{#has4footerblockcolumns }}
+								<div class="row">
+									<div class="col-md-3">
+										<section data-region="footer-left" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-left, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footerleft }}}
+											{{{ blocksfooterleft }}}
+										</section>
+									</div>
+									<div class="col-md-3">
+										<section data-region="footer-middle" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-middle, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footermiddle }}}
+											{{{ blocksfootermiddle }}}
+										</section>
+									</div>
+									<div class="col-md-3">
+										<section data-region="footer-middle-2" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-middle-2, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footermiddle2 }}}
+											{{{ blocksfootermiddle2 }}}
+										</section>
+									</div>
+									<div class="col-md-3">
+										<section data-region="footer-right" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-right, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footerright }}}
+											{{{ blocksfooterright }}}
+										</section>
+									</div>
+								</div>
+							{{/has4footerblockcolumns }}
+							
+							{{#has3footerblockcolumns }}
+								<div class="row">
+									<div class="col-md-4">
+										<section data-region="footer-left" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-left, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footerleft }}}
+											{{{ blocksfooterleft }}}
+										</section>
+									</div>
+									<div class="col-md-4">
+										<section data-region="footer-middle" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-middle, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footermiddle }}}
+											{{{ blocksfootermiddle }}}
+										</section>
+									</div>
+									<div class="col-md-4">
+										<section data-region="footer-right" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-right, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footerright }}}
+											{{{ blocksfooterright }}}
+										</section>
+									</div>
+								</div>
+							{{/has3footerblockcolumns }}
+
+							{{#has2footerblockcolumns }}
+								<div class="row">
+									<div class="col-md-6">
+										<section data-region="footer-left" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-left, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footerleft }}}
+											{{{ blocksfooterleft }}}
+										</section>
+									</div>
+									<div class="col-md-6">
+										<section data-region="footer-right" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-right, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footerright }}}
+											{{{ blocksfooterright }}}
+										</section>
+									</div>
+								</div>
+							{{/has2footerblockcolumns }}
+							
+							{{#has1footerblockcolumns }}
+								<div class="row">
+									<div class="col-md-12" style="text-align: center;">
+										<section data-region="footer-middle" class="hidden-print">
+											<div class="block-pos-desc"><span>{{#str}}region-footer-middle, theme_lambda2{{/str}}</span></div>
+											{{{ addblockbutton_footermiddle }}}
+											{{{ blocksfootermiddle }}}
+										</section>
+									</div>
+								</div>
+							{{/has1footerblockcolumns }}
+							
+                            </div>
+                        </div>
+    			{{/hasfooterblockregion}}
